@@ -21,18 +21,18 @@ jobs:
     steps:
     - uses: actions/checkout@v4      #says to checkout the repository to the place where the runner is operating
     - name: Set up Python 3.11
-    - uses: actions/setup-python@v5
-    - with:
+      uses: actions/setup-python@v5
+      with:
         python-version: "3.11"
     - name: Install dependencies
       run: |
-        python -m pip --upgrade pip setuptools wheel             # upgrades pip
-        python -m pip install .[dev]                             # installs all dependencies necessary for the code to run 
+        python -m pip --upgrade pip setuptools wheel          
+        python -m pip install .[dev]                             
     - name: Lint with flake8
       run: |
-        flake8                                                   # linter which checks the code 'smells nice'
+        flake8                                                  
     - name: Test with pytest
       run: |
-        pytest                                                   # actually runs the tests and checks the functions etc 
+        pytest                                                 
 
         
