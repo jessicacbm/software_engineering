@@ -38,6 +38,6 @@ def minimum(*args):
     the_min = float("inf")
     for arg in args:
         if isinstance(arg, numbers.Real):
-           the_min = min(the_min, arg)
+            the_min = min(the_min, arg)
 
     return the_min
